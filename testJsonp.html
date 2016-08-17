@@ -1,0 +1,29 @@
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+   $.ajax({
+        url:"http://localhost:8080/Check/requestTest?callBack=?",   
+        dataType:"jsonp",
+        jsonpCallback:"person",
+        success:function(data,data1){
+		 debugger;
+            alert(data.id + " is a a" + data.resId);
+        } 
+   });
+
+   function person(data1,data2){
+		   debugger;
+   }
+
+      $.getJSON("http://localhost:8080/Check/requestTest?callBack=?",
+	  function(data,data2){
+		  debugger;
+        alert(data.id + " is a a" + data.resId);
+		 },
+	function(data){
+	
+	  debugger;
+	}
+	
+	);
+</script>
+
